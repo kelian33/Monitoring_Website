@@ -1,0 +1,29 @@
+{% extends 'layout.html' %}
+
+{% block titre %}
+    Connexion
+{% endblock %}
+
+{% block body %}
+<h2>Connexion.</h2>
+
+    <form method="POST">
+    <div class="row">
+    <div class="input-field col s6">
+      <input id="pseudo" name="pseudo" type="text" class="validate">
+      <label class="active" for="pseudo">Nom d'utilisateur</label>
+    </div>
+
+    <div class="input-field col s6">
+      <input id="password" name="password" type="password" class="validate">
+      <label class="active" for="password">Mot de passe</label>
+    </div>
+  	</div>
+
+  	<div class="row">
+    <div class="input-field col s12 right-align">
+      <input value="Connexion" id="submit" type="submit" class="validate">
+    </div>
+  	</div>
+  	</form>
+{% endblock %}

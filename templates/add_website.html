@@ -1,0 +1,33 @@
+{% extends 'layout.html' %}
+
+{% block titre %}
+    Ajouter un site
+{% endblock %}
+
+{% block body %}
+    <h2>Ajout d'un site.</h2>
+
+    <form method="POST">
+    <div class="row">
+    <div class="input-field col s4">
+      <input id="name" name="name" type="text" class="validate">
+      <label class="active" for="name">Nom du site</label>
+    </div>
+
+    <div class="input-field col s8">
+      <input id="url" name="url" type="text" class="validate">
+      <label class="active" for="url">Url du site</label>
+    </div>
+  	</div>
+
+  	<div class="row">
+    <div class="input-field col s12 right-align">
+      <input value="Ajouter" id="submit" type="submit" class="validate">
+    </div>
+  	</div>
+  	</form>
+
+
+
+
+{% endblock %}

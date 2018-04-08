@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/materialize.min.css') }}">
+    <title>{% block titre %}Titre par défaut{% endblock %}</title>
+</head>
+<body>
+
+    <nav class="black">
+    <div class="nav-wrapper black container">
+      <a href="{{ url_for('index') }}" class="brand-logo">Monitoring</a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li><a href="{{ url_for('admin') }}">Administration</a></li>
+        <li><a href="{{ url_for('add') }}">Ajouter un site</a></li>
+        <li><a href="{{ url_for('logout') }}">Déconnexion</a></li>
+      </ul>
+    </div>
+    </nav>
+
+<div class="container">
+    {% block body %}{% endblock %}
+</div>
+    <script src="{{ url_for('static', filename='javascript/materialize.min.js') }}"></script>
+    <script type="text/javascript">
+    	
+  $(document).ready(function() {
+    M.updateTextFields();
+  });
+    </script>
+
+</body>
+</html>

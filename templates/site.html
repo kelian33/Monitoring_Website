@@ -1,0 +1,12 @@
+{% extends 'layout.html' %}
+
+{% block titre %}{% endblock %}
+
+{% block body %}
+{{logs[0][0]}}<br>
+{{logs[0][1]}}<br>
+
+    {% for log in logs %}
+        {{ log[2] }} - {{ log[3] }}</br>
+    {% endfor %}
+{% endblock %}
