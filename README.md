@@ -31,3 +31,7 @@ Vous pouvez dès à présent lancer l'application avec la commande
 
 	chmod +x app.py   //Rend le fichier executable
 	./app.py //Lance le programme
+
+> Les identifiants de connexion pour la partie administrateur sont : 
+> pseudo : admin
+> mot de passe : password

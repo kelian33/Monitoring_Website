@@ -3,10 +3,17 @@
 {% block titre %}{% endblock %}
 
 {% block body %}
-{{logs[0][0]}}<br>
-{{logs[0][1]}}<br>
-
-    {% for log in logs %}
-        {{ log[2] }} - {{ log[3] }}</br>
+<h4>{{logs[0][0]}}</h4>
+<a href="{{logs[0][1]}}">{{logs[0][1]}}</a>
+<br><br>
+<div class="center">
+    {% for log in logs : %}
+    	{% if log[3] <= 200 %}
+        <p class="green">{{ log[2] }} - {{ log[3] }}</p>
+    	
+    	{% else %}
+    	<p class="red">{{ log[2] }} - {{ log[3] }}</p>
+    	{% endif %}
     {% endfor %}
+</div>
 {% endblock %}
